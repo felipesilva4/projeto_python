@@ -1,0 +1,14 @@
+<html>
+<head>
+    <title>Meu site</title>
+</head>
+    <body>
+    <h1>Tem certeza que deseja deletar {{ vitimas1.nome }} </h1>
+
+        <form method="POST" >
+            {% csrf_token %}
+            <button type="submit" >Delete</button>
+        </form>
+
+    </body>
+</html>

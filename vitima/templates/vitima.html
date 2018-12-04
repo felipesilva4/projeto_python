@@ -1,0 +1,17 @@
+{% load static %}
+<html>
+<head>
+<title>Meu site</title>
+
+</head>
+<body>
+    <ul>
+    {% for vitimas1 in vitimas1 %}
+    <li>
+        <a href="{% url 'vitima_dados' vitimas1.id %}"> {{ vitimas1.nome }}</a>
+        <a href ="{% url 'vitima_delete' vitimas1.id %}">Deletar</a>
+    </li>
+    {% endfor %}
+    </ul>
+</body>
+</html>

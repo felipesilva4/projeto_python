@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% load bootstrap %}
+
+{% block main%}
+
+<img max src="https://www.almapbbdo.com.br/static/upload/client/54e0de9c-fa6c-45a9-91ba-5d52be463db6.jpg" class="content_image" alt="Responsive image"  width="1800" height="400"/>
+
+    <center><form action="{% url 'vitimas_new' %}" method = 'POST'>
+    {% csrf_token %}
+    {{ form|bootstrap }}
+    <button type = "submit">Salvar</button> 
+    </center>
+    
+    
+    {% endblock %}
+
+
